@@ -1,0 +1,20 @@
+@mixin bg-style{
+    background-image: $bg-url;
+    background-size: 100% 50%; 
+}
+
+@mixin para-style-large {
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    @content;
+}
+
+@mixin para-style-small {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    @content;
+}

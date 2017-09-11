@@ -1,0 +1,125 @@
+@import 'reset';
+@import 'grid';
+@import 'app';
+@import 'mixin';
+
+$bg-url: url(../images/bg.jpeg);
+$font-name: "Helvetica Neue", sans-serif;
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $font-name;
+    color: #333;
+}
+
+
+
+
+.intro-parent-div,
+.list-parent-div {
+    @include bg-style;
+    border-bottom: 1px solid #ccc; 
+}
+
+.intro-div {
+    h1 {
+        font-size: 50px;
+        line-height: 52px;
+        font-weight: 600;
+        padding-top: 80px;
+        @media(max-width: 735px){
+            font-size: 40px;
+            line-height: 42px;
+            padding-top: 40px;
+        }
+        
+    }
+    #para1 {
+        @include para-style-large {
+            padding-top: 40px;
+        }
+        @media(max-width: 735px){
+           @include para-style-small {
+            padding-top: 20px;
+        } 
+        }
+    }
+    #para2 {
+        @include para-style-large {
+            padding-bottom: 80px;
+        }
+        @media(max-width: 735px){
+            @include para-style-small {
+            padding-bottom: 40px;
+        } 
+        }
+        
+    }
+}
+
+.list-div {
+    @include bg-style;
+    li {
+        padding-top: 80px;
+        counter-increment: step-counter;
+        display: flex;
+        flex-direction: row;
+        &::before {
+            content: counter(step-counter);
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 35px;
+            padding: 50px 20px;
+            @media(max-width: 735px){
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 29px;
+                padding: 0 15px;
+            }
+        }
+        @media(max-width: 735px){
+            padding-top: 40px;
+        }
+    }
+}
+
+.list{
+    display: flex;
+    flex-direction: row;
+    @media(max-width: 735px){
+        flex-direction: column-reverse;
+    }
+    img {
+        height: 130px;
+        width: 151px;
+        @media(max-width: 735px){
+            height: 280px;
+            width: 330px;
+        }
+    }
+    .list-description {
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 4px;
+    h2{
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 29px;
+        padding-bottom: 15px;
+        @media(max-width: 735px){
+            font-size: 19px;
+            line-height: 24px;
+            padding-bottom: 10px;
+        }
+        
+    }
+    p{
+        @include para-style-large;
+        @media(max-width: 735px){
+            @include para-style-small;    
+        }
+    }
+}
+}
+
