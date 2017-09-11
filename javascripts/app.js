@@ -1,6 +1,6 @@
 var liData = "";
 
-  $.getJSON( "../javascripts/avocado.json", function( json ) {
+  $.getJSON( "avocado.json", function( json ) {
     for(var i=0; i < json.length; i++){
         liData = liData + `<li>
                 <div class="list">
