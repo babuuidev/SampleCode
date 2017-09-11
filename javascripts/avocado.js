@@ -1,4 +1,4 @@
-[{
+const json=[{
   "name":"The Everything Bagel Avocado Toast",
   "description":"Let's get down to business with my favorite, shall we? Smear your toasted bread with cream cheese, add avocado, then a dense sprinkle of everything bagel blend.",
   "img":"creamcheese_everything.jpeg"

@@ -1,6 +1,6 @@
 var liData = "";
 
-  $.getJSON( "./javascripts/avocado.json", function( json ) {
+
     for(var i=0; i < json.length; i++){
         liData = liData + `<li>
                 <div class="list">
@@ -12,8 +12,8 @@ var liData = "";
                 </div>
                 </li>`
     }
-    $("ol").html(liData);
- });  
+    document.querySelector(".scroll").innerHTML=liData;
+   
 
 
 
